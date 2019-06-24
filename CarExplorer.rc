@@ -1,0 +1,610 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// RT_MANIFEST
+//
+
+1                       RT_MANIFEST             "res\\CE.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\CE_32x32.ico"
+IDI_TB_FOLDER           ICON                    "res\\TB_Set_Folder_32x32_256.ico"
+IDI_TB_DOWNLOAD         ICON                    "res\\TB_Download_32x32_256.ico"
+IDI_TB_SEARCH           ICON                    "res\\TB_Search_32x32_256.ico"
+IDI_TB_FAVORITES        ICON                    "res\\TB_Favorites_32x32_256.ico"
+IDI_TB_SETTINGS         ICON                    "res\\TB_Options_32x32_256.ico"
+IDI_TB_HELP             ICON                    "res\\TB_Help_32x32_256.ico"
+IDI_CLOSED_FOLDER       ICON                    "res\\TV_OpenFolder_16x16_256.ico"
+IDI_DOCUMENT            ICON                    "res\\TV_CAR_File_16x16.ico"
+IDI_FAVORITES           ICON                    "res\\TV_Favorites_16x16_256.ico"
+IDI_FAVORITES_STANDARD  ICON                    "res\\TV_Favorites_Standard_16x16_256.ico"
+IDI_FAVORITES_OPENSTANDARD ICON                    "res\\TV_Favorites_OpenStandard_16x16_256.ico"
+IDI_FAVORITES_USER      ICON                    "res\\TV_Favorites_User_16x16_256.ico"
+IDI_FAVORITES_OPENUSER  ICON                    "res\\TV_Favorites_UserOpenFolder_16x16_256.ico"
+IDI_FAVORITES_GREEN     ICON                    "res\\TV_Folder_Green_16x16_24b.ico"
+IDI_FAVORITES_OPENGREEN ICON                    "res\\TV_OpenFolder_Green_16x16_24b.ico"
+IDI_FAVORITES_PINK      ICON                    "res\\TV_Folder_Pink_16x16_24b.ico"
+IDI_FAVORITES_OPENPINK  ICON                    "res\\TV_OpenFolder_Pink_16x16_24b.ico"
+IDI_FAVORITES_RED       ICON                    "res\\TV_Folder_Red_16x16_24b.ico"
+IDI_FAVORITES_OPENRED   ICON                    "res\\TV_OpenFolder_Red_16x16_24b.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// CUSTOM
+//
+
+IDR_CUSTOM_GIF          CUSTOM                  "res\\WV_CE_Header.gif"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_EXTRACT DIALOGEX 0, 0, 285, 65
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Extract Images to Folder"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT,7,21,213,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse...",IDC_BUTTON_DESTINATION,228,21,50,14
+    LTEXT           "Destination:",IDC_STATIC,7,7,40,8
+    PUSHBUTTON      "Cancel",IDCANCEL,147,44,50,14
+    PUSHBUTTON      "OK",IDOK,88,44,50,14
+END
+
+IDD_SETTINGS DIALOGEX 0, 0, 231, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Settings"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,174,12,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,174,29,50,14
+    GROUPBOX        "Car Data",IDC_SETTINGS_GROUPTBOX,7,3,158,45
+    COMBOBOX        IDC_SETTINGS_COMBO,48,20,105,41,CBS_DROPDOWN | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Units:",IDC_SETTINGS_STATIC,20,22,20,8
+END
+
+IDD_SETFOLDER DIALOGEX 0, 0, 296, 70
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Set Folder for Car Files"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,89,45,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,155,44,50,14
+    PUSHBUTTON      "Browse...",IDC_SF_BUTTON,238,16,50,14
+    EDITTEXT        IDC_SF_EDIT,11,16,212,14,ES_AUTOHSCROLL
+END
+
+IDD_LOAD_IMAGE_SETS DIALOGEX 0, 0, 273, 204
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Download Collections"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,215,41,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,216,61,50,14
+    LISTBOX         IDC_LIS_LISTBOX1,7,41,80,128,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIS_LISTBOX2,127,41,80,128,LBS_SORT | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      ">>",IDC_LIS_BUTTON1,95,96,26,14
+    LTEXT           "Downloadable:",IDC_STATIC,22,29,48,8
+    LTEXT           "Available:",IDC_STATIC,152,29,32,8
+    LTEXT           "",IDC_LIS_STATIC_STATUS,40,173,226,8
+    LTEXT           "Status:",IDC_STATIC,8,173,24,8
+    CONTROL         "",IDC_LIS_PROGRESS_BAR,"msctls_progress32",WS_BORDER,8,
+                    185,259,14
+    COMBOBOX        IDC_LIS_COMBOBOX,33,10,54,76,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Year:",IDC_STATIC,9,12,18,8
+    PUSHBUTTON      "Download 5-Year CAR Pack",IDC_LIS_BUTTON2,128,10,137,14
+END
+
+IDD_REGISTER_PRODUCT DIALOGEX 0, 0, 327, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Activate Car Explorer 1.03"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,270,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,270,24,50,14
+    LTEXT           "Email:",IDC_STATIC,19,25,20,8
+    LTEXT           "Activation code:",IDC_STATIC,19,50,53,8
+    EDITTEXT        IDC_RP_EDIT_EMAIL,83,24,135,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RP_ACTIVATION_CODE,83,47,226,14,ES_AUTOHSCROLL
+END
+
+IDD_REGISTER_BUY_PRODUCT DIALOGEX 0, 0, 351, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Trial Version"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "Buy",IDC_RBP_BUTTON_BUY,62,47,60,25
+    PUSHBUTTON      "Activate",IDC_RBP_BUTTON_ACTIVATE,146,47,60,25
+    PUSHBUTTON      "Close",IDC_RBP_BUTTON_CLOSE,229,47,60,25
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,3,80,346,1
+    LTEXT           "Email:",IDC_STATIC,13,112,20,8
+    LTEXT           "Activation code:",IDC_STATIC,13,136,53,8
+    EDITTEXT        IDC_RBP_EDIT_EMAIL,71,110,189,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RBP_ACTIVATION_CODE,71,133,269,14,ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    PUSHBUTTON      "Activate",IDOK,150,158,50,14
+    LTEXT           "The free version is limited to 10 collections.",
+                    IDC_RBP_STATIC,90,8,201,8
+    LTEXT           "• To order a license for the PRO version, choose Buy.",
+                    IDC_STATIC,90,21,172,8
+    LTEXT           "• If you have your activation code, choose Activate.",
+                    IDC_STATIC,90,34,170,8
+    LTEXT           "Enter your activation code and click OK to activate your copy:",
+                    IDC_STATIC,13,91,199,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,3,0
+ PRODUCTVERSION 1,0,3,0
+ FILEFLAGSMASK 0x17L
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080004b0"
+        BEGIN
+            VALUE "CompanyName", "MSB LLC"
+            VALUE "FileDescription", "Car Explorer"
+            VALUE "FileVersion", "1, 0, 3, 0"
+            VALUE "LegalCopyright", "Copyright  (c) 2010-2012 MSB LLC. All rights reserved."
+            VALUE "ProductName", "Car Explorer"
+            VALUE "ProductVersion", "1, 0, 3, 0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x800, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_REGISTER_PRODUCT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 320
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 71
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_LV_CONTEXTMENU MENU 
+BEGIN
+    POPUP "Context Menu"
+    BEGIN
+        MENUITEM "Report View",                 IDM_LV_CONTEXTMENU_REPORTVIEW
+
+        MENUITEM "Thumbnails View",             IDM_LV_CONTEXTMENU_THUMBNAILSVIEW
+
+        MENUITEM "Add to Favorites",            IDM_LV_CONTEXTMENU_ADDTOFAVORITES
+
+        MENUITEM "Export...",                   IDM_LV_CONTEXTMENU_EXPORT
+    END
+END
+
+IDR_TV_CONTEXTMENU_FITEM MENU 
+BEGIN
+    POPUP "TV_CONTEXTMENU"
+    BEGIN
+        MENUITEM "Delete",                      IDM_TV_CONTEXTMENU_DELETE
+    END
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ARROW_UP            ICON                    "res\\LV_Up_Arrow_16x16.ico"
+IDI_ARROW_DOWN          ICON                    "res\\LV_Down_Arrow_16x16.ico"
+IDI_TB_VIEW_GREY        ICON                    "res\\TB_Layout_Grey_32x32_256.ico"
+IDI_TB_VIEW_REPORT      ICON                    "res\\TB_Layout_Report_32x32.ico"
+IDI_TB_VIEW_ICON        ICON                    "res\\TB_Layout_Icon_32x32.ico"
+IDI_TB_FOLDER_GREYED    ICON                    "res\\TB_Set_Folder_Greyed_32x32_256.ico"
+IDI_TB_DOWNLOAD_GREYED  ICON                    "res\\TB_Download_Greyed_32x32_256.ico"
+IDI_TB_FAVORITES_GREYED ICON                    "res\\TB_Favorites_Greyed_32x32_256.ico"
+IDI_TB_SEARCH_GREYED    ICON                    "res\\TB_Search_Greyed_32x32_256.ico"
+IDI_CAR_FILE            ICON                    "res\\CAR_File_32_32.ico"
+IDI_FAVORITES_ITEM      ICON                    "res\\TV_Favorites_JPG_16x16.ico"
+IDI_RBP_BUY             ICON                    "res\\RBD_Credit_Cards.ico"
+IDI_RBP_CLOSE           ICON                    "res\\RBD_Close.ico"
+IDI_RBP_CLOSE_GREY      ICON                    "res\\RBD_Close_Grey.ico"
+IDI_RBP_ACTIVATE        ICON                    "res\\RBD_Activate_32x32.ico"
+IDI_FAVORITES_GREYED    ICON                    "res\\TV_Favorites_Greyed_16x16_256.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 187, 116
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "",IDC_STATIC,76,10,105,58
+    LTEXT           "Car Explorer®, version 1.03",IDC_AD_STATIC,81,22,96,8,
+                    SS_NOPREFIX
+    LTEXT           "Copyright © 2010-2012 MSB LLC",IDC_AD_STATIC2,87,36,92,
+                    8
+    LTEXT           "All rights reserved.",IDC_AD_STATIC3,103,50,63,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,1,82,186,1
+    LTEXT           "",IDC_AD_STATIC4,5,86,181,25
+    LTEXT           "",IDC_AD_STATIC5,5,99,181,19
+END
+
+IDD_PP_GENERAL DIALOGEX 0, 0, 212, 126
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_SETTINGS_COMBO,71,29,102,30,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Units:",IDC_STATIC,38,31,20,8
+    CONTROL         "Show welcome view on startup",
+                    IDC_SETTINGS_CHECKBOX_SHOWWV,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,48,93,115,10
+    GROUPBOX        "Welcome (and Search) View",IDC_STATIC,7,69,198,50
+    GROUPBOX        "Details View",IDC_STATIC,7,5,198,57
+END
+
+IDD_ADDFOLDER DIALOGEX 0, 0, 200, 46
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Add Folder"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,143,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,143,24,50,14
+    EDITTEXT        IDC_ADDFOLDER_EDIT,66,15,63,14,ES_AUTOHSCROLL
+    LTEXT           "Folder Name:",IDC_STATIC,14,17,44,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        RIGHTMARGIN, 186
+    END
+
+    IDD_PP_GENERAL, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 205
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_ADDFOLDER, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 39
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Set Cars Folder...",          IDM_FILE_SETFOLDER
+        MENUITEM "Open...",                     ID_FILE_OPEN
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "View"
+    BEGIN
+        MENUITEM "Toolbar",                     IDM_VIEW_TOOLBAR
+        MENUITEM "Status Bar",                  IDM_VIEW_STATUSBAR
+    END
+    POPUP "Tools"
+    BEGIN
+        MENUITEM "Download Collections\tCtrl+D", IDM_TOOLS_DOWNLOAD
+        MENUITEM "Explorer Local Collections Folder...\tCtrl+E", 
+                                                IDM_TOOLS_EXPLORER_FOLDER
+        MENUITEM SEPARATOR
+        MENUITEM "Settings...",                 IDM_TOOLS_SETTINGS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "Web Site...",                 IDM_HELP_WEBSITE
+        MENUITEM "Online Help...",              IDM_HELP_PRODUCTWEBPAGE
+        MENUITEM "Download 5-year CAR Pack...", IDM_HELP_DOWNLOADPACK
+		MENUITEM "Make CAR File...",            IDM_HELP_MAKECARFILE
+        MENUITEM "Affiliates Welcome...",       IDM_HELP_AFFILIATES
+        MENUITEM "Donate Using PayPal...",      IDM_HELP_DONATE
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+END
+
+IDR_TV_CONTEXTMENU_FFOLDER MENU 
+BEGIN
+    POPUP "TV_CONTEXTMENU_FFOLDER"
+    BEGIN
+        MENUITEM "Export...",                   IDM_TV_CONTEXTMENU_FFOLDER_EXPORT
+
+        MENUITEM "Import...",                   IDM_TV_CONTEXTMENU_FFOLDER_IMPORT
+
+        MENUITEM "Add Folder...",               IDM_TV_CONTEXTMENU_FFOLDER_ADD
+
+        MENUITEM "Rename",                      IDM_TV_CONTEXTMENU_FFOLDER_RENAME
+
+        MENUITEM "Delete All ",                 IDM_TV_CONTEXTMENU_FFOLDER_DELETEALL
+
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MENU ACCELERATORS 
+BEGIN
+    "D",            IDM_TOOLS_DOWNLOAD,     VIRTKEY, CONTROL
+    "E",            IDM_TOOLS_EXPLORER_FOLDER, VIRTKEY, CONTROL
+END
+
+IDC_CONTEXTMENUHANDLER ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_SEPARATOR_PATTERN   BITMAP                  "res\\WV_Separator_Brush.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_DAD_DROP     CURSOR                  "res\\DAD_AllowDrop.cur"
+IDC_CURSOR_DAD_NODROP   CURSOR                  "res\\DAD_NoDrop.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_MSS_REPO_ALT_LOCATION 
+                            "ftp://synaptex2009:Moscow1964@ftp.tripod.com/MSB/Image_Sets"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FOLDER              "Set car folder"
+    IDS_DOWNLOAD            "Download collections"
+    IDS_SEARCH              "Search for a car"
+    IDS_FAVORITES           "Show favorites"
+    IDS_VIEW                "Toggle view"
+    IDS_SETTINGS            "Show settings"
+    IDS_HELP                "Show help"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SF_REMOVE_FAVORITES "Changing the collection folder will delete your current Favorites. Continue?"
+    IDS_WV_VALIDATION_MSG   "The price should be composed only of digits, ""$"", and "","" characters!"
+    IDS_IMPORTFAVORITES_ABORTED 
+                            "The operation aborted because of broken favorites:\r\n one or more favorites point to one or more CAR files that are not local!"
+    IDS_IMPORTFAVORITES_REPLACE 
+                            "There are older favorites. Would you like to replace them from the CSV file?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_TV_DELETE_ALL_FAVORITES 
+                            "Are you sure you want to delete all favorites?"
+    IDS_TV_DELETE_FAVORITES_FOLDER 
+                            "Are you sure you want to delete the selected folder with favorites?"
+    IDS_TV_CLEAR_FAVORITES_FOLDER 
+                            "Are you sure you want to clean up the contents of the selected folder?"
+    IDS_TV_DELETE_FAVORITESCARITEM 
+                            "Are you sure you want to delete from favorites the selected car?"
+    IDS_TV_FORBIDDENSYMBOLS "The symbols "","" and ""|"" are not allowed for folder names. Please try another name!"
+    IDS_TV_ZEROLENTHWARNING "The folder name must have at least one character!"
+    IDS_TV_FOLDERALREADYEXISTS 
+                            "The folder with this name already exists. Please use another name!"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_PWD_IFFN            "http://www.carexplorer.org/Downloads/MSB/Image_Sets/CE_PWD.txt"
+    IDS_PWD_ALT_IFFN        "http://synaptex2009.tripod.com/MSB/Image_Sets/CE_PWD.txt"
+    IDS_IMAGESETSLIST_LOCATION 
+                            "http://www.carexplorer.org/Downloads/MSB/Image_Sets/CE_ImageSetsList_v1.1.txt"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_FTP_HOST            "034b905.netsolhost.com"
+    IDS_FTP_USER            "ftp1801807"
+    IDS_FTP_REPO_DIR        "htdocs/Downloads/MSB/Image_Sets"
+    IDS_IMAGESETSLIST_ALT_LOCATION 
+                            "http://synaptex2009.tripod.com/MSB/Image_Sets/CE_ImageSetsList_v1.1.txt"
+    IDS_NO_FAVORITES        "No favorites found. Drag-and-drop a car from the right pane to add favorites."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           " Car Explorer"
+    IDS_MB_APPTITLE         "Car Explorer 1.03"
+    IDR_MENU                "CAREXPLORER"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_AD_COPYRIGHT1       "Warning: This computer program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this"
+    IDS_AD_COPYRIGHT2       "program, or any protion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral (Sys. Default) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_OPEN_FOLDER         ICON                    "res\\TV_Folder_16x16_256.ico"
+#endif    // Neutral (Sys. Default) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

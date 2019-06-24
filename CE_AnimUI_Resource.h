@@ -1,0 +1,37 @@
+// Resource IDs for CustomUI_resource.h are copied from CustomUI.dll's 
+// resource.h. CustomUI_resource.h must be updated if resource ID is updated
+// in CustomUI.dll.
+
+#define IDC_ROTATION_BUTTON              400
+#define IDC_ROTATIONCANVAS_STATIC        401
+#define IDC_ROTATIONCANVAS_EDIT          402
+#define IDC_ROTATIONCANVAS_UPDOWN        403
+#define IDC_ROTATIONCANVAS_COMBOBOX      404
+#define IDC_ROTATIONCANVAS_STATIC2       405
+#define IDC_ROTATIONCANVAS_CHECKBOX      406
+
+#define IDC_SIZE_BUTTON                  500
+#define IDC_SIZECANVAS_RADIOBUTTON       501
+#define IDC_SIZECANVAS_RADIOBUTTON2      502
+#define IDC_SIZECANVAS_RADIOBUTTON3      503
+#define IDC_SIZECANVAS_RADIOBUTTON4      504
+
+#define IDC_POSITION_BUTTON              600
+#define IDC_POSITIONCANVAS_RADIOBUTTON   601
+#define IDC_POSITIONCANVAS_RADIOBUTTON2  602
+
+#define IDC_ANIMATION_BUTTON             700
+#define IDC_ANIMATIONCANVAS_STATIC       701
+#define IDC_ANIMATIONCANVAS_COMBOBOX     702
+#define IDC_ANIMATIONCANVAS_STATIC2      703
+#define IDC_ANIMATIONCANVAS_STATIC3      704
+#define IDC_ANIMATIONCANVAS_TRACKBAR     705
+#define IDC_ANIMATIONCANVAS_STATIC4      706
+
+#define IDC_COLORS_BUTTON                800
+#define IDC_COLORSCANVAS_STATIC          801 // text
+#define IDC_COLORSCANVAS_STATIC2         802 // owner draw
+#define IDC_COLORSCANVAS_BUTTON          803
+#define IDC_COLORSCANVAS_STATIC3         804 // text
+#define IDC_COLORSCANVAS_STATIC4         805 // owner draw
+#define IDC_COLORSCANVAS_BUTTON2         806
