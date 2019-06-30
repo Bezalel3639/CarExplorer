@@ -1,0 +1,27 @@
+Your use of Car Explorer is governed by the following Terms and Conditions:
+
+Acceptance of License Agreement
+
+You should carefully read the following terms and conditions before using Car Explorer (the "Software").  Unless you have a different license agreement signed by MSB LLC, your use of this software indicates your agreement to these terms and conditions.  If you do not accept all of these terms and conditions, you must cease using the Software immediately.
+
+Copyright
+
+Customer acknowledges that the Software, and accompanying user documentation ("Documentation") are copyrighted works owned by MSB LLC and that Customer has no rights in the foregoing except as expressly granted herein.
+
+MSB LLC hereby grants you a non-exclusive, non-transferable, limited license to use the Software free of charge. This version of Software (v1.03) can be used free of charge for one calendar year since its release.
+
+Distribution of the Software
+
+Provided that you include a copy of this License Agreement, you may (a) make copies of the Software; (b) give exact, unmodified copies of the Software to anyone; and (c) distribute the Software in its unmodified form via electronic means.  You are specifically prohibited from charging any fees for any such copies or distributions.
+
+Term and Termination
+
+You may continue to use the Software for as long as you comply with the terms and conditions of this License Agreement.  MSB LLC may terminate this License Agreement immediately upon notice to you in the event that MSB LLC has reason to believe you have breached this License Agreement.  Upon termination, you shall immediately cease all use of the Software, and Documentation.
+
+Governing Law
+
+The validity and interpretation of this Agreement shall be governed by the laws of the United States of America and the State of Pensilvania.  Customer agrees that the federal and state courts located in the State of Pensilvania, Luzerne County, shall be the appropriate site of venue for actions relating to this Agreement, and hereby consents to the exclusive jurisdiction and venue of such courts.
+
+Disclaimer of Warranty
+
+THE SOFTWARE AND DOCUMENTATION ARE PROVIDED "AS IS."  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, MSB LLC DISCLAIMS ALL WARRANTIES, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE.
