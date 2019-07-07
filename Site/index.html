@@ -1,0 +1,1093 @@
+<!-- CarExplorer.org Site version: 4.0; 12/23/12 -->
+
+<html>
+<head>
+<title>Car Explorer & Car Server</title>
+
+<meta name="Description" content="Make intelligent car-buying decisions by knowing car markets better."/>
+<meta name="Keywords" content="Car Explorer, car marketing, car shopping, XCD format, CAR file, Car Server"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="expires" content="0">
+<meta name="revisit-after" content="2 Days">
+
+<!-- Requirement from Google.com -->
+<meta name="google-site-verification" content="Byczu6QrL35LN9fqs9bUkZJIkkTfVNjC2Hg7fgH0ftU" />
+<link rel="shortcut icon" href="http://www.carexplorer.org/favicon.ico">
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29124522-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<style>
+
+.clsDigest
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    color: red;
+}
+
+.clsText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+.clsLock
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.clsCE
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #777777;
+}
+
+.clsFooterText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: red;   
+}
+
+.clsHeaderLink A:link
+{
+    color: red;
+}
+
+.clsHeaderLink A:visited
+{
+    color: red;
+}
+
+
+.clsTableHeader
+{
+    border-right: black thin outset;
+    border-top: #ffffff thin outset;
+    border-left: #ffffff thin outset;
+    border-bottom: black thin outset;
+
+    height: 10; 
+    text-align: center; 
+    color: red; 
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+    font-size: 10pt;
+    font-weight: bold; 
+    background-color:#339900; 
+}
+
+.clsTextArea
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+    font-size: 10pt;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(247,247,239);
+}
+</style>
+
+<script type="text/javascript">
+
+// Preload images.
+if (document.images) 
+{
+    var aImage = new Array(20);
+   
+    aImage[0] = 'Images/Left_30_30.gif';
+    aImage[1] = 'Images/Right_30_30.gif';
+    aImage[2] = 'CE_Images/CE_Header.gif';
+    aImage[3] = 'Images/Separator_250.jpg';
+    aImage[4] = 'Images/Separator_300.jpg';
+    aImage[5] = 'CE_Images/Download_CE.png';
+    aImage[6] = 'Images/FWF_TestedClean.png';
+    aImage[7] = 'Images/Vista_Certified.png';
+    aImage[8] = 'Images/Win7_Certified.png';
+    aImage[9] = 'CE_Images/image1_w100.thumb.png';
+    aImage[10] = 'CE_Images/image2_w100.thumb.png';
+    aImage[11] = 'CE_Images/image3_h100.thumb.png';
+    aImage[12] = 'CE_Images/image4_w100.thumb.png';
+    aImage[13] = 'CE_Images/image5_w100.thumb.png';
+    aImage[14] = 'CE_Images/image6_w100.thumb.png';
+    aImage[15] = 'CE_Images/image7_w100.thumb.png';
+    aImage[16] = 'CE_Images/image8_w100.thumb.png';
+    aImage[17] = 'CE_Images/image9_w100.thumb.png';
+    aImage[18] = 'CE_Images/image10_w100.thumb.png';
+    aImage[19] = 'CE_Images/image11_w100.thumb.png';
+
+    // Start preloading.
+    for (i=0; i < 20; i++) 
+    {
+        var objImage = new Image();
+        objImage.src = aImage[i];
+    }  
+}
+</script>
+<script type="text/javascript" src="Scripts/CE_PreloadMakes.js"></script>
+<script type="text/javascript" src="Scripts/CE_Thumbnails.js"></script>
+<link rel="stylesheet" type="text/css" href="Styles/CE_Thumbnails.css" />
+
+<script>
+hs.graphicsDir = 'highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+//hs.dimmingOpacity = 0.75;
+
+
+// Add the slideshow controller
+hs.addSlideshow({
+    slideshowGroup: 'group1',
+    interval: 5000,
+    repeat: false,
+    useControls: true,
+    fixedControls: 'fit',
+    overlayOptions: {
+        opacity: '0.75',
+        position: 'bottom center',
+        offsetX: '0',
+        offsetY: '-15',
+        hideOnMouseOut: true
+    }
+});
+
+// gallery config object
+var config1 = {
+    slideshowGroup: 'group1',
+    transitions: ['expand', 'crossfade']
+};
+
+
+</script>
+</head>
+
+<body bgcolor="lightgrey" topmargin="60"> 
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='30' bgcolor='#339900'>
+<td align='left' bgcolor='lightgrey' width='30'><IMG height=30 src='Images/Left_30_30.gif' width=30></td>
+<td>&nbsp;</td>
+<td align='right' bgcolor='lightgrey' width='30'><IMG height=30 src='Images/Right_30_30.gif' width=30></td>
+</tr></table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr id='idTR_Header' height='35' bgcolor='#339900'>
+<td align='left'><img src ='CE_Images/CE_Header.gif' style='margin-left: 50px' width=507></td>
+<td></td><td class="clsHeaderLink" align='center' width='250' style='color:red; font-family: verdana, tahoma; font-size: 10pt; font-weight: bold'><a href='http://www.carexplorer.org/Hello.htm'><b>Affiliates</b> </a>of All World Cars<br>with open <a href='http://www.codeproject.com/KB/atl/xcd.aspx'><b>XCD format</b></a><br>
+</td></tr></table>
+        
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='20' bgcolor='#339900'>
+<td width='250'>&nbsp;</td>
+        
+<td align='left' width='350' bgcolor='#339900'><td><td>&nbsp;</td></tr></table>        
+      
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+
+<tr>
+<td><img height=20 src='Images/Separator_250.jpg' width=250></td>
+<td><img height=20 src='Images/Separator_300.jpg' width=340></td>
+<td><img height=20 src='Images/Separator_300.jpg' width=260></td></tr>
+</table>
+
+<table class="clsHeaderLink"
+bgcolor="white" class="clsText" align='center' width='850' border='0' 
+cellspacing='0' cellpadding='0' bgcolor='#cccccc'>
+
+<tr>
+<td style='padding-left: 30px; padding-top: 20px;'>
+<a href='http://www.carexplorer.org/Downloads/CE/CE.zip'>
+<img src='CE_Images/Download_CE.png' border='0' 
+alt='Download Car Explorer (All Windows)'></a>
+</td>
+<td rowspan='3' style='padding-left: 30px; padding-top: 15px; padding-right: 30px; text-align: justify'><p class='clsText'><span style='color:red; font-family: trebuchet MS, verdana, tahoma; font-size: 10pt; font-weight: bold'>Car Explorer</span> makes a 
+difference by organizing data about world cars into collections (CAR files) that group car pictures and descriptions by Year and Make. In this way, <span style='color:red; font-family: trebuchet MS, verdana, tahoma; font-size: 10pt; font-weight: bold'>Car 
+Explorer</span> makes easy to harness knowledge about car markets in the well-structured, granular, and perceptible way. Due to this organization of data in downloadable CAR files the analysis of car markets has never been easier.</
+</td>
+<td style='padding-left:5px; padding-top: 20px'><!--a href="http://www.twitter.com/Car_Explorer">
+<img src='Images/Twitter_follow_me.png' border='0'></a--></td>
+</tr>
+
+<tr>
+<td style='padding-left: 30px; padding-top: 10px; color:#000000; font-family: trebuchet MS, verdana, tahoma; 
+font-size: 8pt;'>
+<p>
+<b>Current version:</b> 1.03<br>
+<b>Release date:</b> 12/22/2012<br>
+<b>Size:</b> 2.66 MB<br>
+<b>OS</b>: Windows 8 & 7, Vista, XP and older<br>
+<b>Requires:</b> FTP connection with Car Server<br>
+</p>
+</td>
+
+<td style='padding-right:20px; padding-top: 20px'><a href='http://www.freewarefiles.com/Car-Explorer_program_62588.html'>
+<img src='Images/FWF_TestedClean.png' border='0' alt='FreewareFiles tested Car Explorer 1.02 on 2012-09-16 using leading antivirus scanners and found it 100% Clean'></a>
+</td>
+</tr>
+<tr><td style='padding-left: 55px;padding-top: 10px;'><img src='Images/Win8_Compatible.png' border='0'>&nbsp;&nbsp;<img src='Images/Win7_Certified.png' border='0'>&nbsp;&nbsp;<img src='Images/Vista_Certified.png' border='0'>&nbsp;&nbsp;
+</td>
+<td></td></tr>
+
+
+<tr><td>
+<p style='padding-left: 30px; padding-top: 20px; font-family: trebuchet MS, verdana, tahoma; font-size: 12pt; font-weight: bold'>New in Car Explorer v1.03</p>
+</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td style='padding-left:30px;padding-top: 10px;' colspan='2' class='clsText'>
+<ul>
+<li>Added option to download <a href='RegForm.htm'>5-Year CAR Pack</a></li>
+<li>Added online <a href='http://www.carexplorer.org/Downloads/CE/Help/CE_Help.htm'>help</a></li>
+<li>Audi 2013 (33 models), Chrysler 2013 (4 models), Nissan 2012 (30 models) are featured
+<li>Car Server has specs (as of 12/22/12) for: <b>54</b> automakers (78 CAR files), <b>841</b> cars</li>
+<li>Added affiliates landing <a href='Hello.htm'>page</a>, and <a href='MakeCARFile.htm'>instructions</a> how to make CAR files</li>
+</ul>
+</td><td>&nbsp;</td></tr>
+
+
+<tr>
+<td style='padding-left: 30px; padding-top: 10px;' colspan='3'>
+<div class="highslide-gallery">
+    <ul>
+    <li>
+    <a href="CE_Images/update1_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/update1_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">
+        The favorites are structured: added default folders, you can add yours. 
+        To place your favorite car under favorites, simply drag-and-drop a car from the right
+        list view.
+        </div>
+    </li>
+    
+    <li>
+    <a href="CE_Images/update2_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/update2_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">
+        The Year, Fuel search options are added.
+    </div>
+    </li>
+    
+    <li>
+    <a href="CE_Images/update3_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/update3_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">
+        The Car Explorer is a grass-root entrepreneurial initiative. Please <a href='http://www.carexplorer.org/donate.htm'>donate</a>. 
+    </div>
+    </li>
+    
+    </ul>
+    
+</td><td></td><td></td>	
+</tr>
+<tr>
+<td style='padding-left: 30px; padding-top: 20px;' colspan='3'>
+<p style='font-family: trebuchet MS, verdana, tahoma; 
+font-size: 12pt; font-weight: bold'>Screenshots</p>
+<div class="highslide-gallery">
+    <ul>
+    <li>
+    <a href="CE_Images/image1_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image1_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">
+        The Car Explorer architecture makes use of CAR files. Any CAR file has digest information about 
+        all cars for a particular Make released in a particular Year. The application communicates with Car 
+        Server about available CAR files. 
+    </div>
+    </li>
+    <li>
+    <a href="CE_Images/image2_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image2_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">
+    The start view of Car Explorer enables you to seach for a car based on selection criteria. 
+    On the right there is an interface that provides quick help.
+    </div>
+    </li>
+    <li>
+    <a href="CE_Images/image3.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image3_h100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">
+    The start view control provides quick help and updates information.
+    </div>
+    </li>
+    <li>
+    <a href="CE_Images/image4_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image4_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">
+    The right pane shows car pictures and descriptions corresponding to the CAR file selected 
+    in the left pane. Notice that the right pane may show in the upper area either pictures 
+    or details. You can toggle the view with the toolbar button.
+    </div>
+    </li>
+    <li>
+    <a href="CE_Images/image5_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image5_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">
+    The list view in the right pane can be ordered in ascending or descending 
+    order with a click on any column. This is especially practical with the price 
+    column. This sample shows instant information on relative prices for all car 
+    released by Opel in the year 2012, and obtained with a single click.
+    </div>
+    </li>
+    <li>
+    <a href="CE_Images/image6_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image6_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">One of the major benefits of the program is the opportunity to 
+    analyze car information in the main list view activated with a click on the "All" folder
+    in the left tree view. The view shows details for all cars, you can quickly compare by ordering 
+    column in ascending or descending fashion.
+    </div>
+
+    </li>
+    <li>
+    <a href="CE_Images/image7_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image7_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">To make quick comparison for the cars produced in any 
+    country, select the country and click related column in the list view to order the data. 
+    The Export to CSV option is accessible from the right-click menu in the list view.
+    </div>
+    </li>
+    <li>
+    <a href="CE_Images/image8_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image8_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">Use drag-and-drop to memorize your picks under the
+    Favorites folder. Alternatively, right-click any list view in the right pane and 
+    select "Add to Favorites...". Since v1.01 the program adds Export/Import options for 
+    favorites accessible from the right-click menu of the Favorites folder.
+    </div>
+
+    </li>
+    <li>
+    <a href="CE_Images/image9_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image9_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">View and analyze your favorites instantly: select favorites
+    and click a column in the list view to order data for comparison.
+    </div>
+    </li>
+    <li>
+    <a href="CE_Images/image10_60.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image10_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">
+    Double-click a car in the right pane to see its picture in the standard Windows' 
+    picture viewer. By the way, the picture viewer has an option to set the picture as
+    Desktop Background, and send it to printer.
+    </div>
+    </li>
+    <li>
+    <a href="CE_Images/image11.png" class="highslide" 
+            title="" 
+            onclick="return hs.expand(this)">
+        <img src="CE_Images/image11_w100.thumb.png"  alt=""/>
+    </a>
+    <div class="highslide-caption">The dialog enables you to download CAR files for 
+    free from Car Server.
+    </div>
+    </li>
+    </ul>
+    <div style="clear:both"></div></div>
+    
+</td><td></td><td></td></tr>	
+</table> 
+
+<table align='center' width='850' bgcolor='#ffffff'>
+<tr><td>&nbsp;</td></tr>
+<tr><td>
+<p style='padding-left: 30px; padding-bottom: 10px;font-family: trebuchet MS, verdana, tahoma; font-size: 12pt; font-weight: bold'>Cars with XCD format</p>
+</td></tr>
+<tr><td>
+<p class='clsText' style='padding-left: 30px; padding-right: 30px; text-align: justify'>Right below, 
+you can freely download collections, represented by the icon <img align='absbottom' src='CE_Images/CAR_File.png' border='0'>. 
+Making use of the <a style='color:red;' href='http://www.codeproject.com/KB/atl/xcd.aspx'><b>XCD format</b></a>, a 
+collection keeps quick facts (pictures and descriptions) about all cars for a specific Make and Year. 
+You can also download a set of collection for a specific Year (unzip it into a single directory). To view CAR files, 
+point <span style='color:red; font-family: trebuchet MS, verdana, tahoma; font-size: 10pt; font-weight: bold'>Car Explorer</span> 
+to the directory with CAR files. A complete set of CAR files is fairly compact (less than 50 MB). That's why
+it makes sense to keep quick facts about all major cars locally and download new CAR files of interest (this 
+function will be automated in future releases). Here is the 
+<a style='color:red; font-weight:bold' href='Downloads/CE/Collections/AllCARFiles_2012_2008.zip'>link</a> to download all available CAR files for the last 5 years in one ZIP (29.2 MB). 
+</td></tr>
+</table>
+
+<table class="clsText" align='center' width='850' border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'>   
+<tr><td><br>
+
+<table align='center' border='0' style='font-family: verdana; font-size: 8pt'>
+<tr class='clsTableHeader'>
+<td>&nbsp;</td><td>Make</td><td>2013</td><td>2012</td><td>2011</td><td>2010</td><td>2009</td><td>2008</td><td>2007</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Acura.gif'></td>
+<td>Acura</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Acura_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;5</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Aston_Martin.jpg'></td>
+<td>Aston Martin</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Aston_Martin_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;7</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Audi.jpg'></td>
+<td>Audi</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Audi_2013.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>33</td></tr>
+</table></td>
+<td>&nbsp;</td><td align='center'>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Audi_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>13</td></tr>
+</table></td>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Bentley.gif'></td>
+<td>Bentley</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Bentley_2010.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;8</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Bentley_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;5</td></tr>
+</table>
+</tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/BMW.jpg'></td>
+<td>BMW</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Buick.jpg'></td>
+<td>Buick</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Buick_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;3</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Cadillac.jpg'></td>
+<td>Cadillac</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Cadillac_2010.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;9</td></tr>
+</table></td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Cadillac_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>10</td></tr>
+</table></td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Cadillac_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>11</td></tr>
+</table>
+</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Chevrolet.jpg'></td>
+<td>Chevrolet</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Chevrolet_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>16</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Chrysler.jpg'></td>
+<td>Chrysler</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Chrysler_2013.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>4</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Citroen.jpg'></td>
+<td>Citro&euml;n</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Citroen_2012.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>19</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Dodge.jpg'></td>
+<td>Dodge</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Dodge_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>10</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Ferrari.jpg'></td>
+<td>Ferrari</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Ferrari_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;7</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Ferrari_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;6</td></tr>
+</table>
+</tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Ford.jpg'></td>
+<td>Ford</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Ford_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>13</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/GMC.jpg'></td>
+<td>GMC</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/GMC_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;8</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Honda.jpg'></td>
+<td>Honda</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Honda_2010.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>15</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Honda_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>15</td></tr>
+</table>
+</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Hummer.jpg'></td>
+<td>Hummer</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Hummer_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;2</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Hyundai.jpg'></td>
+<td>Hyundai</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Hyundai_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>12</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Infiniti.jpg'></td>
+<td>Infiniti</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Infiniti_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;6</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Isuzu.jpg'></td>
+<td>Isuzu</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Isuzu_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;2</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Jaguar.jpg'></td>
+<td>Jaguar</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Jaguar_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>12</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Jeep.jpg'></td>
+<td>Jeep</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Jeep_2010.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;7</td></tr>
+</table></td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Jeep_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;7</td></tr>
+</table>
+</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Kia.jpg'></td>
+<td>Kia</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Kia_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>12</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Lada.gif'></td>
+<td>Lada</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Lada_2010.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>17</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Lamborghini.jpg'></td>
+<td>Lamborghini</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Lamborghini_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;5</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Land_Rover.jpg'></td>
+<td>Land Rover</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Land_Rover_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;4</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Lexus.jpg'></td>
+<td>Lexus</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Lexus_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>15</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Lexus_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;9</td></tr>
+</table>
+</tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Lincoln.jpg'></td>
+<td>Lincoln</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Lincoln_2010.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;7</td></tr>
+</table></td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Lincoln_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;5</td></tr>
+</table>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTableHeader'><td>&nbsp;</td><td>&nbsp;</td>
+<td>2013</td>
+<td>2012<br><a href='Downloads/CE/Collections/CARFiles_2012.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2012 collections in one ZIP'></a></td>
+<td>2011<br><a href='Downloads/CE/Collections/CARFiles_2011.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2011 collections in one ZIP'></a></td>
+<td>2010<br><a href='Downloads/CE/Collections/CARFiles_2010.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2010 collections in one ZIP'></a></td>
+<td>2009<br><a href='Downloads/CE/Collections/CARFiles_2009.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2009 collections in one ZIP'></a></td>
+<td>2008<br><a href='Downloads/CE/Collections/CARFiles_2008.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2008 collections in one ZIP'></a></td>
+<td>2007</td></tr>
+</table>
+<br></td>
+
+<td><table align='center' border='0' style='font-family: verdana; font-size: 8pt'>
+<tr class='clsTableHeader'>
+<td>&nbsp;</td><td>Make</td><td>2012</td><td>2011</td><td>2010</td><td>2009</td><td>2008</td><td>2007</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Lotus.jpg'></td>
+<td>Lotus</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Lotus_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;2</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Maybach.jpg'></td>
+<td>Maybach</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Maybach_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;4</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Mazda.jpg'></td>
+<td>Mazda</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Mazda_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>10</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Mazerati.jpg'></td>
+<td>Mazerati</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Mazerati_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;4</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Mercedes.jpg'></td>
+<td>Mercedes-Benz</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Mercedes_2010.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>16</td></tr>
+</table></td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Mercedes_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>30</td></tr>
+</table>
+</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Mercury.jpg'></td>
+<td>Mercury</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Mercury_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;5</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/MINI.jpg'></td>
+<td>MINI</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/MINI_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;9</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Mitsubishi.jpg'></td>
+<td>Mitsubishi</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Mitsubishi_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;7</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Opel.jpg'></td>
+<td>Opel</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Opel_2012.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>15</td></tr>
+</table></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Nissan.jpg'></td>
+<td>Nissan</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Nissan_2012.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>30</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Nissan_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>14</td></tr>
+</table></td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Nissan_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>10</td></tr>
+</table>
+</tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Peugeot.jpg'></td>
+<td>Peugeot</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Peugeot_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>24</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Pontiac.jpg'></td>
+<td>Pontiac</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Pontiac_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;9</td></tr>
+</table></td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Pontiac_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;9</td></tr>
+</table>
+</td>
+<td>&nbsp;</td></tr>
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Porsche.jpg'></td>
+<td>Porsche</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Porsche_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>33</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Renault.jpg'></td>
+<td>Renault</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Renault_2012.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>27</td></tr>
+</table></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Rolls_Royce.gif'></td>
+<td>Rolls-Royce</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Rolls_Royce_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;5</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Rolls_Royce_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;4</td></tr>
+</table>
+</tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Saab.jpg'></td>
+<td>Saab</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Saab_2008.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;6</td></tr>
+</table></td>
+<td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Saturn.jpg'></td>
+<td>Saturn</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Saturn_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;4</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Scion.jpg'></td>
+<td>Scion</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Scion_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;4</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Skoda.jpg'></td>
+<td>Skoda</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Skoda_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>14</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Smart.jpg'></td>
+<td>Smart</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Smart_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;2</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Subaru.jpg'></td>
+<td>Subaru</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Subaru_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;8</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Suzuki.jpg'></td>
+<td>Suzuki</td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Suzuki_2009.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;4</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Tata.png'></td>
+<td>Tata</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Tata_2010.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;6</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Toyota.jpg'></td>
+<td>Toyota</td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Toyota_2010.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>11</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Toyota_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>16</td></tr>
+</table>
+</td></tr>
+
+<tr class='clsTextArea'>
+<td align='center'><img src='CE_Images/Makes/Volga.jpg'></td>
+<td>Volga</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Volga_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>10</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Volkswagen.jpg'></td>
+<td>Volkswagen</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Volkswagen_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>14</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Volkswagen_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>15</td></tr>
+</table>
+</tr>
+
+<tr class='clsTextArea'>
+<td><img src='CE_Images/Makes/Volvo.jpg'></td>
+<td>Volvo</td>
+<td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Volvo_2011.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:red; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;9</td></tr>
+</table></td>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+<td align='center'>
+<table border='0' cellspacing='0' cellpadding='0'><tr><td><a href='Downloads/CE/Collections/Volvo_2007.car'><img src='CE_Images/CAR_File.png' border='0'></a></td><td style='font-family: verdana; font-size: 7pt; font-weight: bold; color:blue; padding-left:2px; padding-bottom:8px'>&nbsp;&nbsp;8</td></tr>
+</table>
+</tr>
+
+<tr class='clsTableHeader'><td>&nbsp;</td><td>&nbsp;</td>
+<td>2012<br><a href='Downloads/CE/Collections/CARFiles_2012.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2012 collections in one ZIP'></a></td>
+<td>2011<br><a href='Downloads/CE/Collections/CARFiles_2011.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2011 collections in one ZIP'></a></td>
+<td>2010<br><a href='Downloads/CE/Collections/CARFiles_2010.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2010 collections in one ZIP'></a></td>
+<td>2009<br><a href='Downloads/CE/Collections/CARFiles_2009.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2009 collections in one ZIP'></a></td>
+<td>2008<br><a href='Downloads/CE/Collections/CARFiles_2008.zip'><img src='CE_Images/zip.gif' border='0' alt='Download 2008 collections in one ZIP'></a></td>
+<td>2007</td></tr>
+</table>
+</td></tr>
+</table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'> 
+<td><img height=20 src='Images/Separator_250.jpg' width=250></td> 
+<td><img height=20 src='Images/Separator_300.jpg' width=340></td> 
+<td><img height=20 src='Images/Separator_300.jpg' width=260></td></tr> 
+<tr height='70' bgcolor='#339900'>
+<td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="http://www.carexplorer.org/MakeCARFile.htm" class="clsFooterText">Make CAR File</a></td>
+<td colspan='1' align='center'>
+<a href="Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">[Contact Us]</a>
+<div align='center' class="highslide-caption">Thank you for contacting MSB LLC!</div>
+<p class='clsFooterText'>MSB LLC &copy; 2013</p></td>
+<td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">Submit CAR File</a></td></tr>
+</table> 
+</body>
+</html>

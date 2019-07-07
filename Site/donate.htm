@@ -1,0 +1,289 @@
+<html>
+<head>
+<title>Car Explorer 1.0</title>
+
+<meta name="Description" content="Make intelligent car-buying decisions by knowing car markets better."/>
+<meta name="Keywords" content="Car Explorer, CAR file, MSS file, car-buying decision"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="expires" content="0">
+<meta name="revisit-after" content="2 Days">
+
+<!-- Requirement from Google.com -->
+<meta name="google-site-verification" content="Byczu6QrL35LN9fqs9bUkZJIkkTfVNjC2Hg7fgH0ftU" />
+<link rel="shortcut icon" href="http://www.carexplorer.org/favicon.ico">
+
+<!--script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29124522-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script-->
+
+<!-- Car Explorer Site version: 3.9; 09/15/12 -->
+
+<style>
+
+.clsDigest
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    color: red;
+}
+
+.clsText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+.clsLock
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.clsCE
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #777777;
+}
+
+.clsFooterText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: red;   
+}
+
+.clsHeaderLink A:link
+{
+    color: red;
+}
+
+.clsHeaderLink A:visited
+{
+    color: red;
+}
+
+
+.clsTableHeader
+{
+    border-right: black thin outset;
+    border-top: #ffffff thin outset;
+    border-left: #ffffff thin outset;
+    border-bottom: black thin outset;
+
+    height: 10; 
+    text-align: center; 
+    color: red; 
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+    font-size: 10pt;
+    font-weight: bold; 
+    background-color:#669900; 
+}
+
+.clsTextArea
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+	font-size: 10pt;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(247,247,239);
+}
+</style>
+
+<script type="text/javascript">
+
+// Preload images.
+if (document.images) 
+{
+    var aImage = new Array(5);
+   
+    aImage[0] = 'Images/Left_30_30.gif';
+    aImage[1] = 'Images/Right_30_30.gif';
+    aImage[2] = 'CE_Images/CE_Header.gif';
+    aImage[3] = 'Images/Separator_250.jpg';
+    aImage[4] = 'Images/Separator_300.jpg';
+
+    // Start preloading.
+    for (i=0; i < 5; i++) 
+    {
+        var objImage = new Image();
+        objImage.src = aImage[i];
+    }  
+}
+</script>
+
+<script type="text/javascript" src="Scripts/CE_Thumbnails.js"></script>
+<link rel="stylesheet" type="text/css" href="Styles/CE_Thumbnails.css" />
+
+<script>
+hs.graphicsDir = 'highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+//hs.dimmingOpacity = 0.75;
+
+
+// Add the slideshow controller
+hs.addSlideshow({
+	slideshowGroup: 'group1',
+	interval: 5000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: '0.75',
+		position: 'bottom center',
+		offsetX: '0',
+		offsetY: '-15',
+		hideOnMouseOut: true
+	}
+});
+
+// gallery config object
+var config1 = {
+	slideshowGroup: 'group1',
+	transitions: ['expand', 'crossfade']
+};
+</script>
+
+</head>
+
+<body bgcolor="lightgrey" topmargin="60"> 
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='30' bgcolor='#339900'>
+<td align='left' bgcolor='lightgrey' width='30'><IMG height=30 src='Images/Left_30_30.gif' width=30></td>
+<td>&nbsp;</td>
+<td align='right' bgcolor='lightgrey' width='30'><IMG height=30 src='Images/Right_30_30.gif' width=30></td>
+</tr></table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr id='idTR_Header' height='35' bgcolor='#339900'>
+<td align='left'><img src ='CE_Images/CE_Header.gif' style='margin-left: 50px' width=507></td>
+<td></td><td class="clsHeaderLink" align='center' width='250' style='color:red; font-family: verdana, tahoma; font-size: 10pt; font-weight: bold'>All World Cars<br>with <a href='http://www.codeproject.com/KB/atl/xcd.aspx'><b>XCD format</b></a></td></tr>
+</table>
+ 
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='20' bgcolor='#339900'>
+<td width='250'>&nbsp;</td>
+        
+<td align='left' width='350' bgcolor='#339900'><td><td>&nbsp;</td></tr></table>        
+      
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+
+<tr>
+<td><img height=20 src='Images/Separator_250.jpg' width=250></td>
+<td><img height=20 src='Images/Separator_300.jpg' width=340></td>
+<td><img height=20 src='Images/Separator_300.jpg' width=260></td></tr>
+</table>
+
+
+
+<table class="clsHeaderLink"
+bgcolor="white" class="clsText" align='center' width='850' border='0' 
+cellspacing='0' cellpadding='0' bgcolor='#cccccc'>
+
+<tr>
+<!--td style='padding-left: 30px; padding-top: 20px;'>
+<a href='http://www.carexplorer.orgDownloads/CE/CE.zip'>
+<img src='CE_Images/Download_CE.png' border='0' 
+alt='Download Car Explorer (All Windows)'></a>
+</td-->
+<td rowspan='3' style='padding-left: 30px; padding-top: 15px; padding-right: 30px; text-align: justify'>
+<br>
+<p class='clsText'>Buying a car is a minefield, and generally ranks second on the level of financial risks 
+after buying a house. <span style='color:red; font-family: trebuchet MS, verdana, tahoma; font-size: 10pt; 
+font-weight: bold'>Car Explorer</span> helps to avoid most common mistakes.</p>
+ 
+<p class='clsText'>If you are in the process of car shopping as buyer, or you are an advertising agency 
+interested to increase productivity of your business, or you are a car manufacturer motivated by bulk car sales 
+this version and future releases of <span style='color:red; font-family: trebuchet MS, verdana, tahoma; font-size: 10pt; font-weight: bold'>Car Explorer</span>
+reflect the vision how to make car buying and selling less risky and more enjoyable, cheaper for car buyers and
+with more volumes for car dealers and manufacturers.</p> 
+<p class='clsText'>This project was started as a grassroots entrepreneurial effort, and continues to be. All 
+software and car descriptions on this site are free. In future releases you can expect (1) as <b>car shopper</b>: 
+push technology that automatically brings on your computer or mobile device latest releases from car manufactures in 
+compact form as CAR files, various tools including <b>CarDiff</b> for car comparison, (2) as car <b>advertisement agency</b>: 
+a compact format for description of the cars you are marketing compatible with 
+<span style='color:red; font-family: trebuchet MS, verdana, tahoma; font-size: 10pt; font-weight: bold'>Car Explorer</span>,
+(3) as <b>carmaker</b>: an integration with <b>Car Server</b>, direct marketing and sales.</p>
+<p class='clsText'>Please make contribution to make it happen!</p>
+</td>
+<!--td style='padding-left:5px; padding-top: 20px'><a href="http://www.twitter.com/Car_Explorer">
+<img src='Images/Twitter_follow_me.png' border='0'></a></td-->
+</tr>
+ 
+</table>
+
+<table style='padding-top: 20px; padding-bottom: 20px' class="clsHeaderLink"
+bgcolor="white" class="clsText" align='center' width='850' border='0' 
+cellspacing='0' cellpadding='0' bgcolor='#cccccc'>
+
+<form method="post" action="https://www.paypal.com/cgi-bin/webscr">
+        <tbody>
+            <tr>
+                <td style='padding-left: 90px; text-align: justify'><span style='font-family: trebuchet MS, verdana, tahoma; font-size: 10pt; font-weight: bold'>Donation Amount</span></td>
+                <td style="padding-left: 20px;"><select name="amount">
+                <option value="10.00">$10.00</option>
+                <option value="25.00">$25.00</option>
+                <option value="50.00">$50.00</option>
+                <option value="100.00" selected="selected">$100.00</option>
+                <option value="250.00">$250.00</option>
+                <option value="500.00">$500.00</option>
+                <option value="1000.00">$1,000.00</option>
+                <option value="2500.00">$2,500.00</option>
+                <option value="0.00">Other</option>
+                </select></td>
+                <td style="padding-left: 20px;padding-right: 20px;">&nbsp;
+				<input alt="Make payments with PayPal - its fast, free and secure!" 
+				src="https://www.paypal.com/en_US/i/btn/x-click-but04.gif" type="image" name="submit" /></td>
+           </tr>
+        </tbody>	
+    <input type="hidden" name="cmd" value="_xclick" /> 
+	<input type="hidden" name="item_name" value="Friends of Car Explorer" /> 
+	<input type="hidden" name="business" value="support@carexplorer.org" /> 
+	<input type="hidden" name="no_shipping" value="2" /> 
+	<input type="hidden" name="return" value="http://www.carexplorer.org/thank_you/" /> 
+	<input type="hidden" name="cancel_return" value="http://www.crexplorer.org" /> 
+	<input type="hidden" name="cn" value="Any Special Instructions?" /> 
+	<input type="hidden" name="currency_code" value="USD" /> 
+	<input type="hidden" name="tax" value="0" /> 
+	<input type="hidden" name="bn" value="PP-DonationsBF" />
+</form>
+<tr><td></td><td><p style='padding-top: 20px;padding-right: 20px;' class='clsText'>Thank you for your support!</p></td><td></td></tr>
+</table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'> 
+<td><img height=20 src='Images/Separator_250.jpg' width=250></td> 
+<td><img height=20 src='Images/Separator_300.jpg' width=340></td> 
+<td><img height=20 src='Images/Separator_300.jpg' width=260></td></tr> 
+<tr height='70' bgcolor='#339900'>
+<td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="http://www.carexplorer.org/MSB.htm" class="clsFooterText">Create/Edit CAR File</a></td>
+<td colspan='1' align='center'>
+<a href="Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">[Contact Us]</a>
+<div align='center' class="highslide-caption">Thank you for contacting MSB LLC!</div>
+<p class='clsFooterText'>MSB LLC &copy; 2005-2013</p></td>
+<td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">Submit CAR File</a></td></tr>
+</table> 
+</body>
+</html>

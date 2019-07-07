@@ -1,0 +1,328 @@
+<html>
+
+<head>
+
+<style>
+.clsText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+	text-align: justify;
+}
+
+.clsHeaderLink A:link
+{
+    color: red;
+}
+
+.clsHeaderLink A:visited
+{
+    color: red;
+}
+
+.clsTableHeader
+{
+    border-right: black thin outset;
+    border-top: #ffffff thin outset;
+    border-left: #ffffff thin outset;
+    border-bottom: black thin outset;
+
+    height: 10; 
+    text-align: center; 
+    color: red; 
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+    font-size: 10pt;
+    font-weight: bold; 
+    background-color:#339900; 
+}
+
+.clsTextArea
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+	font-size: 10pt;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(247,247,239);
+}
+
+.clsNoteTextArea
+{
+    padding-left: 15px;
+    background-color: rgb(247,247,239);
+    border-left-width: thick; 
+    border-left-style: double; 
+    border-left-color: red;
+    text-align: justify;
+}
+
+.clsFooterText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: red;   
+}
+</style>
+
+<script type="text/javascript" src="http://www.carexplorer.org/Scripts/CE_Thumbnails.js"></script>
+<link rel="stylesheet" type="text/css" href="http://www.carexplorer.org/Styles/CE_Thumbnails.css" />
+
+<script>
+hs.graphicsDir = 'http://www.carexplorer.org/highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+//hs.dimmingOpacity = 0.75;
+
+
+// Add the slideshow controller
+hs.addSlideshow({
+	slideshowGroup: 'group1',
+	interval: 5000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: '0.75',
+		position: 'bottom center',
+		offsetX: '0',
+		offsetY: '-15',
+		hideOnMouseOut: true
+	}
+});
+
+// gallery config object
+var config1 = {
+	slideshowGroup: 'group1',
+	transitions: ['expand', 'crossfade']
+};
+
+</script>
+</head>
+
+<body bgcolor="lightgrey" topmargin="60"> 
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='30' bgcolor='#339900'>
+<td align='left' bgcolor='lightgrey' width='30'><IMG height=30 src='http://www.carexplorer.org/Images/Left_30_30.gif' width=30></td>
+<td>&nbsp;</td>
+<td align='right' bgcolor='lightgrey' width='30'><IMG height=30 src='http://www.carexplorer.org/Images/Right_30_30.gif' width=30></td>
+</tr></table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr id='idTR_Header' height='35' bgcolor='#339900'>
+<td align='left'><img src ='http://www.carexplorer.org/CE_Images/Email/CE_Email_Logo.gif' style='margin-left: 50px' width=354></td>
+<td></td><td class="clsHeaderLink" align='center' width='250' style='color:red; font-family: verdana, tahoma; font-size: 10pt; font-weight: bold'>All World Cars<br>with <a href='http://www.codeproject.com/KB/atl/xcd.aspx'><b>XCD format</b></a></td></tr></table>
+        
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='20' bgcolor='#339900'>
+<td width='250'>&nbsp;</td>
+        
+<td align='left' width='350' bgcolor='#339900'><td><td>&nbsp;</td></tr></table>        
+      
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+
+<tr>
+<td><img height=20 src='http://www.carexplorer.org/Images/Separator_250.jpg' width=250></td>
+<td><img height=20 src='http://www.carexplorer.org/Images/Separator_300.jpg' width=340></td>
+<td><img height=20 src='http://www.carexplorer.org/Images/Separator_300.jpg' width=260></td></tr>
+</table>
+
+<table class="clsText" align='center' width='850' style='padding-left: 50px; padding-right: 50px' border='0' cellspacing='0' cellpadding='0' bgcolor='#ffffff'> 
+<tr>
+<td><br><h2 align='center'>Contents</h2>
+<ul>
+<li><a href="#concept">Concept</a>
+<li><a href="#benefits">Benefits</a>
+<li><a href="#use">How to Use</a>
+<ul>
+<li><a href="#use_a">Search</a>
+<li><a href="#use_b">View</a>
+<li><a href="#use_c">Sort and Analyze</a>
+<li><a href="#use_d">Favorites</a>
+<li><a href="#use_e">Working with Individual Pictures</a>
+<li><a href="#use_f">Download Car Descriptions</a>
+</ul>
+<li><a href="#termsofuse">Terms of Use</a>
+</ul>
+
+</td></tr>
+
+<tr>
+<td>
+<h2 align='center'><a name="concept">Concept</a></h2>
+
+<p>Car Explorer is designed to be a convenient inventory of all major world cars so 
+that selecting your dream car is easy and efficient, and you can avoid most common mistakes, in particular 
+in terms of price you pay for a car.</p>
+
+<p> 
+
+<p><div class='clsNoteTextArea' align='left'>Car Explorer makes use of CAR files 
+that are car descriptions in the <a href='http://www.codeproject.com/KB/atl/xcd.aspx'>
+<b>XCD format</b></a>. It is the central feature of the software. One CAR file 
+describes all cars for one Make (automaker) and one Year. For example, the Audi 2013
+CAR file (Audi_2013.car) contains all quick specs (including pictures) for Audi 2013 
+cars available in North America.</div></p>
+
+<p>It means if you need to know about all 2013 cars from Audi you need to have only one file.
+At the moment you can download all specs in one ZIP file for the last 5 years, or use Car Explorer 
+download option to download CAR file of your interest. This feature is supposed to be automated (Car Explorer
+would automatically download car specs when available).
+</p>
+<p><div class='clsNoteTextArea' align='left'>The car descriptions are free, and will be free of charge. 
+Hopefully car sites, car dealers, and automakers will be interested to have car descriptions in XCD format published on their sites or bundled with Car Explorer as marketing leads, 
+and help to make the list of CAR files for every year complete (use <a href='http://www.carexplorer.org/MakeCARFile.htm'>these</a> instructions to make or edit CAR files).</div></p>
+<p>Car Explorer is a desktop application. An abridged version for handheld gadgets is planned 
+(investors are welcome).</p><br>
+</td></tr>
+
+<tr>
+<td>
+<h2 align='center'><a name="benefits">Benefits</a></h2>
+<p>Car Explorer is a promising alternative to the Internet sites that offer car descriptions for 
+several reasons:
+<ol> 
+<li> Sites typically provide information about one or a few automakers. It means
+options to compare cars from different automakers are not available or limited, and even cannot be implemented.
+<li>Surfing online for your dream car can be irksome and frustrating, handicapped by slow connections 
+(car sites love flash!). 
+<li>Sites have poor persistence models or don't have options to store preferences at all, so it is difficult
+or not possible at all to keep track of your favorite cars, memorize entry points etc (by the way that's 
+the reason why web versions of office products such as Word and Excel are not popular).
+<li>To our knowledge no one previously tried to describe all world cars in a uniform format that
+provides quick specs for all cars released by a specific automaker in a specific year.
+</ol>
+<p>With Car Explorer you have instant access to quick car specs in <a href='http://www.codeproject.com/KB/atl/xcd.aspx'>
+<b>XCD format</b></a>, can instantly sort and analyze those across any number of different automakers,
+plus you have a single entry point, and can keep track of your favorites in an instant and convenient manner.
+</td></tr>
+
+<tr>
+<td>
+<h2 align='center'><a name="use_a">Search</a></h2>
+
+<p>The search view is the default view of Car Explorer.</p>
+
+<p><div class='clsNoteTextArea' align='left'>The Search option implies that you have 
+CAR files on your computer. Since v1.02, Car Explorer comes with samples of CAR files.
+Having information about all major automakers is easy since the size of car data for 
+the 40-50 major world cars manufactures (quick specs plus pictures) for the last 5 
+years is 100-150 MB, quite small even for a mobile device. To enable extensive search 
+please download free <a href='http://www.carexplorer.org/RegForm.htm'>5-Year CAR Pack
+</a> or you can use the Download Collection menu option in Car Explorer to view 
+available CAR files and make downloads one-by-one.</div></p>
+
+<p>You can search cars by Year, Type, Price, Fuel or with any combination of these 
+parameters. Notice that it is frequently more convenient to find a car by sorting
+list view in the right pane starting from a category (All, Year, Country, Make, 
+Favortites)  in the left pane.</p>
+
+</td></tr>
+
+<tr>
+<td>
+<h2 align='center'><a name="use_b">View</a></h2>
+<p>You can view car descriptions as a list in the right pane starting from a 
+category (All, Year, Country, Make, Favorites) in the left pane. Click on 
+any column to sort data in ascending or descending order.</p>
+<p>When you click on a CAR file in the left pane, Car Explorer provides a list
+of cars plus two detail views in the bottom for the selected car (pictures
+and specs). Use the Toggle View toolbar option to toggle between list 
+view and icon view.</p><br>
+</td></tr>
+
+<tr>
+<td>
+<h2 align='center'><a name="use_c">Sort and Analyze</a></h2>
+<p>Sorting the list of cars across all major carmakers, with any car detail 
+(Price, Length, Width, Height, Fuel Type, Engine Power etc) as a sort 
+parameter, with instant results is a <b>unique</b> and powerful feature of Car 
+Explorer. Start from any category (All, Year, Country, Make, Favorites) 
+in the left pane, and click any column in the right pane to sort data in 
+ascending or descending order.</p><br>
+</td></tr>
+
+<tr>
+<td>
+<h2 align='center'><a name="use_d">Favorites</a></h2>
+<p>You can keep track of your car research during one session or between sessions by using
+Favorites.</p>
+
+<p>Simply drag-and-drop a car from the right pane (list view or icon view) to the left pane.
+The car will be stored under Favorites root. You can store a car favorite under a specific
+default folder (Sedan, Convertible, SUV, Green, Sport etc) by making drag-and-drop onto this folder,
+or you can create your own folders (up to 2 levels under Favorites root).</p>
+
+<p>You can export favorites from any folder to CSV format, and work with it in Excel</p>
+<br></td></tr>
+
+<tr>
+<td>
+<h2 align='center'><a name="use_e">Working with Individual Pictures</a></h2>
+
+<p>Can you view, save, or print a picture of your favorite car? Yes, easy.
+Double-click a car in the list view or icon view in the right pane.
+This opens the picture viewer integrated with Windows. Now you can save, 
+transform, print, set as desktop background and so on.</p>
+<br></td></tr>
+
+<tr>
+<td>
+<h2 align='center'><a name="use_f">Download Car Descriptions</a></h2>
+
+<p>As mentioned in <a href="#concept">Concept</a>, Car Explorer is a viewer of CAR files.
+To make use of the program at least one CAR file should be available locally 
+(after installation there are 3 CAR files available). All CAR files are free and can 
+be downloaded either:
+
+<ul>
+<li>One-by-one within Car Explorer (Tools/Download Collections)
+<li>You can save time by downloading all CAR files for the last 5 years 
+(Tools/Download Collections and click "Download 5-Year CAR Pack" button).
+Unzip CAR files into the current Cars Folder (see location in 
+File/Set Cars Folder...)
+</ul></p>
+<p>It is planned to have automated downloads of CAR files upon availability 
+in the future releases.</p>
+<br></td></tr>
+
+<tr>
+<td>
+<h2 align='center'><a name="termsofuse">Terms of Use</a></h2>
+
+<p>Car Explorer, XCD and CAR file formats are registered TM by MSB LLC. All 
+rights are reserved by MSB LLC.</p>
+
+<p>This product, along with any associated source code and files, is licensed 
+under <a href='http://creativecommons.org/licenses/by-sa/3.0'>The Creative 
+Commons Attribution-Share Alike 3.0 Unported License</a>.
+
+<p>The CAR files or collections as described in this article are supposed to 
+be shared freely, and selling them would be contrary to the terms.</p>
+<br></td></tr>
+</table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'> 
+<tr>
+<td><img height=20 src='http://www.carexplorer.org/Images/Separator_250.jpg' width=250></td> 
+<td><img height=20 src='http://www.carexplorer.org/Images/Separator_300.jpg' width=340></td> 
+<td><img height=20 src='http://www.carexplorer.org/Images/Separator_300.jpg' width=260></td></tr> 
+
+<tr height='70' bgcolor='#339900'>
+<!--td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="http://www.carexplorer.org/MSB.htm" class="clsFooterText">Create/Edit CAR File</a></td-->
+<td colspan='3' align='center'>
+<a href="http://www.carexplorer.org/Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">[Contact Us]</a>
+<div align='center' class="highslide-caption">Thank you for contacting MSB LLC!</div>
+<p class='clsFooterText'>MSB LLC &copy; 2005-2012</p></td>
+<!--td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">Submit CAR File</a></td--></tr>
+</table>  
+
+<!--p align='center'><br>&#169; 2012 MSB LLC. All rights reserved.<br></p-->
+
+</body>
+</html>
