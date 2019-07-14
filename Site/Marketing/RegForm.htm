@@ -1,0 +1,395 @@
+<html>
+<head>
+<title>Car Explorer 1.0</title>
+
+<meta name="Description" content="Make intelligent car-buying decisions by knowing car markets better."/>
+<meta name="Keywords" content="Car Explorer, CAR file, MSS file, car-buying decision"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="expires" content="0">
+<meta name="revisit-after" content="2 Days">
+
+<!-- Requirement from Google.com -->
+<meta name="google-site-verification" content="Byczu6QrL35LN9fqs9bUkZJIkkTfVNjC2Hg7fgH0ftU" />
+<link rel="shortcut icon" href="http://www.carexplorer.org/favicon.ico">
+
+<!--script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29124522-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script-->
+
+<!-- Car Explorer Site version: 3.9; 09/15/12 -->
+
+<style>
+
+.clsDigest
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    color: red;
+}
+
+.clsText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+.clsLock
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.clsCE
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #777777;
+}
+
+.clsFooterText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: red;   
+}
+
+.clsHeaderLink A:link
+{
+    color: red;
+}
+
+.clsHeaderLink A:visited
+{
+    color: red;
+}
+
+
+.clsTableHeader
+{
+    border-right: black thin outset;
+    border-top: #ffffff thin outset;
+    border-left: #ffffff thin outset;
+    border-bottom: black thin outset;
+
+    height: 10; 
+    text-align: center; 
+    color: red; 
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+    font-size: 10pt;
+    font-weight: bold; 
+    background-color:#669900; 
+}
+
+.clsTextArea
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+	font-size: 10pt;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(247,247,239);
+}
+</style>
+
+<script type="text/javascript">
+
+// Preload images.
+if (document.images) 
+{
+    var aImage = new Array(5);
+   
+    aImage[0] = 'Images/Left_30_30.gif';
+    aImage[1] = 'Images/Right_30_30.gif';
+    aImage[2] = 'CE_Images/CE_Header.gif';
+    aImage[3] = 'Images/Separator_250.jpg';
+    aImage[4] = 'Images/Separator_300.jpg';
+
+    // Start preloading.
+    for (i=0; i < 5; i++) 
+    {
+        var objImage = new Image();
+        objImage.src = aImage[i];
+    }  
+}
+</script>
+
+<script type="text/javascript" src="Scripts/CE_Thumbnails.js"></script>
+<link rel="stylesheet" type="text/css" href="Styles/CE_Thumbnails.css" />
+<script>
+hs.graphicsDir = 'highslide/graphics/';
+hs.align = 'center';
+hs.transitions = ['expand', 'crossfade'];
+hs.outlineType = 'rounded-white';
+hs.fadeInOut = true;
+//hs.dimmingOpacity = 0.75;
+
+
+// Add the slideshow controller
+hs.addSlideshow({
+	slideshowGroup: 'group1',
+	interval: 5000,
+	repeat: false,
+	useControls: true,
+	fixedControls: 'fit',
+	overlayOptions: {
+		opacity: '0.75',
+		position: 'bottom center',
+		offsetX: '0',
+		offsetY: '-15',
+		hideOnMouseOut: true
+	}
+});
+
+// gallery config object
+var config1 = {
+	slideshowGroup: 'group1',
+	transitions: ['expand', 'crossfade']
+};
+</script>
+
+<script language="javascript">
+	function validate(frm) {
+		var inputFields = new Array("user_name" ,"user_email");
+		var counter;
+		var name;
+		var msg = "Please complete the following fields:\n";
+		var badFields = "";
+		for (counter = 0; counter < inputFields.length; counter++) {
+			name = inputFields[counter];
+			if (frm.elements[name].value.length == 0) {
+				if (name == "formmail_mail_email") {
+					badFields = badFields + "  - Email \n";
+				} else {
+					badFields = badFields + "  - " + name + "\n";
+				}
+			}
+		}
+		if (badFields.length != 0) {
+			alert(msg + badFields);
+			return false;
+		}
+		if (frm.formmail_mail_email.value.length > 0) {
+			return emailCheck(frm.formmail_mail_email.value);
+		} else {
+			return true;
+		}
+	}
+
+	function emailCheck(emailStr) {
+		var emailPat=/^(.+)@(.+)$/;
+		var specialChars="\\(\\)<>@,;:\\\\\\\"\\.\\[\\]";
+		var validChars="\[^\\s" + specialChars + "\]";
+		var quotedUser="(\"[^\"]*\")";
+		var ipDomainPat=/^\[(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})\]$/;
+		var atom=validChars + '+';
+		var word="(" + atom + "|" + quotedUser + ")";
+		var userPat=new RegExp("^" + word + "(\\." + word + ")*$");
+		var domainPat=new RegExp("^" + atom + "(\\." + atom +")*$");
+		var matchArray=emailStr.match(emailPat);
+
+		if (matchArray==null) {
+			alert("Email address seems incorrect (check @ and .'s)");
+			return false;
+		}
+
+		var user=matchArray[1];
+		var domain=matchArray[2];
+
+		if (user.match(userPat)==null) {
+    			alert("The username doesn't seem to be valid.");
+			return false;
+		}
+
+		var IPArray=domain.match(ipDomainPat);
+		if (IPArray!=null) {
+	  		for (var i=1;i<=4;i++) {
+			    if (IPArray[i]>255) {
+		        	alert("Destination IP address is invalid!");
+				return false;
+	 	   		}
+    			}
+    			return true;
+		}
+
+		var domainArray=domain.match(domainPat);
+		if (domainArray==null) {
+			alert("The domain name doesn't seem to be valid.");
+    			return false;
+		}
+
+		var atomPat=new RegExp(atom,"g");
+		var domArr=domain.match(atomPat);
+		var len=domArr.length;
+		if (domArr[domArr.length-1].length<2 || domArr[domArr.length-1].length>3) {
+		   alert("The address must end in a three-letter domain, or two letter country.");
+   			return false;
+		}
+
+		if (len<2) {
+   			var errStr="This address is missing a hostname!";
+			alert(errStr);
+   		return false;
+		}
+
+ 		return true;
+	}
+</script>
+
+</head>
+
+<body bgcolor="lightgrey" topmargin="60"> 
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='30' bgcolor='#339900'>
+<td align='left' bgcolor='lightgrey' width='30'><IMG height=30 src='Images/Left_30_30.gif' width=30></td>
+<td>&nbsp;</td>
+<td align='right' bgcolor='lightgrey' width='30'><IMG height=30 src='Images/Right_30_30.gif' width=30></td>
+</tr></table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr id='idTR_Header' height='35' bgcolor='#339900'>
+<td align='left'><img src ='CE_Images/Email/CE_Email_Logo.gif' style='margin-left: 50px' width=354></td>
+<td></td><td class="clsHeaderLink" align='center' width='250' style='color:red; font-family: verdana, tahoma; font-size: 10pt; font-weight: bold'>All World Cars<br>with<br> <a href='http://www.codeproject.com/KB/atl/xcd.aspx'><b>open XCD format</b></a></td></tr>
+</table>
+ 
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='20' bgcolor='#339900'>
+<td width='250'>&nbsp;</td>
+        
+<td align='left' width='350' bgcolor='#339900'><td><td>&nbsp;</td></tr></table>        
+      
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+
+<tr>
+<td><img height=20 src='Images/Separator_250.jpg' width=250></td>
+<td><img height=20 src='Images/Separator_300.jpg' width=340></td>
+<td><img height=20 src='Images/Separator_300.jpg' width=260></td></tr>
+</table>
+
+<table style='padding-left: 200px; padding-right: 100px; padding-top: 20px; padding-bottom: 20px;' bgcolor="white" 
+class="clsText" align='center' border='0' width='850' 
+cellspacing='0' cellpadding='0' bgcolor='#cccccc'>
+
+
+<tr>
+<!--td style='padding-left: 0px; padding-right: 20px'-->
+<td align='center' colspan=2>
+<table  border='0' cellspacing='0' cellpadding='0'>
+
+<tr>
+<td colspan=3>
+<img height=38 src="http://www.carexplorer.org/CE_Images/Email/Frame_Top.jpg" width=234>
+</td></tr>
+
+<tr>
+
+<td width=23>
+<img height=140 src="http://www.carexplorer.org/CE_Images/Email/Frame_Left.jpg" width=23>
+</td>
+
+<td valign=top align=left width=174>
+
+<table cellspacing=0 cellpadding=0 width=174 border=0>
+
+<tr align='center'>
+<td colspan=2>
+<p style="font: 14px Trebuchet MS, Trebuchet, Arial, Helvetica, sans-serif; color: red">
+<strong>Car Server Summary</strong><br>
+<span style="font-size: 11px; color: #777">as of 12/16/2012</span></p>
+</td>
+</tr>
+
+<tr>
+<td colspan=2><img height=23 src="http://www.carexplorer.org/CE_Images/Email/Frame_DottedLine.jpg" width=173>
+</td></tr>
+
+<tr>
+<td valign=top width=150 height=20>
+<p style="font: 12px Trebuchet MS, Trebuchet, Arial, Helvetica, sans-serif; color: #ff9900">Car Manufactures: </p></td>
+<td valign=top width=23 height=20>
+<p style="font: 12px Trebuchet MS, Trebuchet, Arial, Helvetica, sans-serif; color: #ff9900">54</p>
+
+</td></tr>
+
+<tr>
+<td vAlign=top width=150 height=20>
+<p style="font: 12px Trebuchet MS, Trebuchet, Arial, Helvetica, sans-serif; color: #339900">Collections (CAR files): </p></TD>
+<td vAlign=top width=23>
+<p style="font: 12px Trebuchet MS, Trebuchet, Arial, Helvetica, sans-serif; color: #339900">78</p>
+
+</td></tr>
+
+<tr>
+<td valign=top width=150 height=20>
+<p style="font: 12px Trebuchet MS, Trebuchet, Arial, Helvetica, sans-serif; color: #339900">Cars: </p></td>
+<td valign=top width=23>
+<p style="font: 12px Trebuchet MS, Trebuchet, Arial, Helvetica, sans-serif; color: #339900">841</p>
+</td></tr>
+</table>
+
+</td>
+<td width=25><img height=140 src="http://www.carexplorer.org/CE_Images/Email/Frame_Right.jpg" width=37>
+</td></tr>
+
+<tr>
+<td colspan=3><img height=29 src="http://www.carexplorer.org/CE_Images/Email/Frame_Bottom.jpg" width=234>
+</td></tr></table><br>
+</td>
+</tr>
+
+<tr>
+<td align='left' colspan=2>
+<p>The registration (private) and all downloads are free. Please enter your name and email to have download link to
+<b>CAR Files Pack</b> with all available collections for the last 5-years.<br><br>
+</p>
+</td></tr>
+
+<form name="frm" action="insert.php" method="post" onsubmit="return validate(frm)">
+<tr><td>Name:</td><td align='center'><input type="text" style="background-color:#B5E5AB" name="user_name"></td></tr>
+<tr><td>Email:</td><td align='center'><input type="text" style="background-color:#B5E5AB" name="user_email"></td></tr>
+<tr><td>Mobile (optional):</td><td align='center'><input type="text" style="background-color:#F7F699" name="user_mobile"></td></tr>
+<tr><td>Twitter (optional):</td><td align='center'><input type="text" style="background-color:#F7F699" name="user_twitter"></td></tr>
+<tr><td>Facebook (optional):</td><td align='center'><input type="text" style="background-color:#F7F699" name="user_facebook"></td></tr>
+<tr><td>Web (optional):</td><td align='center'><input type="text" style="background-color:#F7F699" name="user_web"></td></tr>
+<tr><td>Any message (optional):</td><td align='center'><input type="text" style="background-color:#F7F699" name="user_message"></td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td>&nbsp;</td><td align='center'><input type="Submit" value ="Submit"></td>
+</tr>
+</form>
+
+</table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'> 
+<td><img height=20 src='Images/Separator_250.jpg' width=250></td> 
+<td><img height=20 src='Images/Separator_300.jpg' width=340></td> 
+<td><img height=20 src='Images/Separator_300.jpg' width=260></td></tr> 
+<tr height='70' bgcolor='#339900'>
+<!--td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="http://www.carexplorer.org/MSB.htm" class="clsFooterText">Create/Edit CAR File</a></td-->
+<td colspan='3' align='center'>
+<a href="Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">[Contact Us]</a>
+<div align='center' class="highslide-caption">Thank you for contacting MSB LLC!</div>
+<p class='clsFooterText'>MSB LLC &copy; 2005-2012</p></td>
+<!--td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">Submit CAR File</a></td-->
+</tr>
+</table> 
+</body>
+</html>

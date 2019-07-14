@@ -1,0 +1,307 @@
+<html>
+<head>
+<title>Car Explorer 1.0</title>
+
+<meta name="Description" content="Make intelligent car-buying decisions by knowing car markets better."/>
+<meta name="Keywords" content="Car Explorer, CAR file, MSS file, car-buying decision"/>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<meta http-equiv="Content-Language" content="en-us" />
+<meta http-equiv="expires" content="0">
+<meta name="revisit-after" content="2 Days">
+
+<!-- Requirement from Google.com -->
+<meta name="google-site-verification" content="Byczu6QrL35LN9fqs9bUkZJIkkTfVNjC2Hg7fgH0ftU" />
+<link rel="shortcut icon" href="http://www.carexplorer.org/favicon.ico">
+
+<!--script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-29124522-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script-->
+
+<!-- Car Explorer Site version: 3.9; 09/15/12 -->
+
+<style>
+
+.clsDigest
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 11pt;
+    font-weight: bold;
+    color: red;
+}
+
+.clsText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+.clsLock
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.clsCE
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 30pt;
+    font-weight: bold;
+    color: #777777;
+}
+
+.clsHeaderText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: red;   
+}
+
+.clsFooterText
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif;
+    font-size: 10pt;
+    font-weight: bold;
+    color: red;   
+}
+
+.clsHeaderLink A:link
+{
+    color: red;
+}
+
+.clsHeaderLink A:visited
+{
+    color: red;
+}
+
+
+.clsTableHeader
+{
+    border-right: black thin outset;
+    border-top: #ffffff thin outset;
+    border-left: #ffffff thin outset;
+    border-bottom: black thin outset;
+
+    height: 10; 
+    text-align: center; 
+    color: red; 
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+    font-size: 10pt;
+    font-weight: bold; 
+    background-color:#669900; 
+}
+
+.clsTextArea
+{
+    font-family: trebuchet MS, verdana, arial, sans-serif; 
+	font-size: 10pt;
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: rgb(247,247,239);
+}
+
+.clsNoteTextArea
+{
+    padding-left: 15px;
+    background-color: rgb(247,247,239);
+    border-left-width: thick; 
+    border-left-style: double; 
+    border-left-color: red;  
+}
+</style>
+
+<script type="text/javascript">
+
+// Preload images.
+if (document.images) 
+{
+    var aImage = new Array(5);
+   
+    aImage[0] = 'Images/Left_30_30.gif';
+    aImage[1] = 'Images/Right_30_30.gif';
+    aImage[2] = 'CE_Images/CE_Header.gif';
+    aImage[3] = 'Images/Separator_250.jpg';
+    aImage[4] = 'Images/Separator_300.jpg';
+
+    // Start preloading.
+    for (i=0; i < 5; i++) 
+    {
+        var objImage = new Image();
+        objImage.src = aImage[i];
+    }  
+}
+</script>
+
+</head>
+
+<body bgcolor="lightgrey" topmargin="60"> 
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='30' bgcolor='#339900'>
+<td align='left' bgcolor='lightgrey' width='30'><IMG height=30 src='Images/Left_30_30.gif' width=30></td>
+<td>&nbsp;</td>
+<td align='right' bgcolor='lightgrey' width='30'><IMG height=30 src='Images/Right_30_30.gif' width=30></td>
+</tr></table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr id='idTR_Header' height='35' bgcolor='#339900'>
+<td align='left'><img src ='CE_Images/Email/CE_Email_Logo.gif' style='margin-left: 50px' width=354></td>
+<td></td><td class="clsHeaderLink" align='center' width='250' style='color:red; font-family: verdana, tahoma; font-size: 10pt; font-weight: bold'>All World Cars<br>with <a href='http://www.codeproject.com/KB/atl/xcd.aspx'><b>XCD format</b></a></td></tr>
+</table>
+ 
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+<tr height='20' bgcolor='#339900'>
+<td width='250'>&nbsp;</td>
+        
+<td align='left' width='350' bgcolor='#339900'><td><td>&nbsp;</td></tr></table>        
+      
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'>
+
+<tr>
+<td><img height=20 src='Images/Separator_250.jpg' width=250></td>
+<td><img height=20 src='Images/Separator_300.jpg' width=340></td>
+<td><img height=20 src='Images/Separator_300.jpg' width=260></td></tr>
+</table>
+
+<table class='clsText' style='padding-left: 50px; padding-right: 50px' bgcolor="white" align='center' width='850' border='0' cellspacing='0' cellpadding='0' bgcolor='#cccccc'>
+
+<tr>
+<td align='center'><br><h2>Intructions to Make or Edit CAR Files</h2></td></tr>
+
+<tr>
+<td><!--h2>Contents</h2-->
+<ul>
+<li><a href="#makecarfile">How to Make CAR File</a></li>
+<li><a href="#editcarfile">How to Edit CAR File</a></li>
+<ul>
+<li><a href="#add">Add Description</a></li>
+<li><a href="#edit">Edit Description</a></li>
+<li><a href="#remove">Remove Description</a></li>
+</ul>
+<li><a href="#conclusion">License Terms</a></li>
+</ul>
+</td></tr>
+
+<tr><td align='center'><h2><a name="makecarfile">How to Make CAR File</a></h2></td></tr>
+
+<tr>
+<td><!--br-->
+<p><div class='clsNoteTextArea' align='left'>
+Notice that MSB Wizard creates MSS file, but Car Explorer reads CAR files. It should not
+bother you since MSS file format is exactly the same as CAR file format if used for car descriptions.
+Simply rename resulting MSS file exptension to CAR extension manually after MSB Wizard makes the file.
+</div></p>
+
+<li>Download MSB Wizard (component of MyScreenSaver Builder) for <a class='clsHeaderText' href='http://www.carexplorer.org/Downloads/MSB/MSB_Vista.zip'>Windows 7/Vista</a> or <a class='clsHeaderText' 
+href='http://www.carexplorer.org/Downloads/MSB/MSB_XP.zip'>Windows XP</a>, install, run MSB Wizard:<br><br>
+</td></tr>
+
+<tr>
+<td align='center'><img  src='http://www.carexplorer.org/CE_Images/Email/Wizard_Welcome.png'><br><br>
+</td></tr>
+
+<tr>
+<td><li>On the second Wizard's page point to the location of car pictures (JPG or GIF):<br><br>
+</td></tr>
+
+<tr>
+<td align='center'><img src='http://www.carexplorer.org/CE_Images/Email/Wizard_PicSource.png'><br><br>
+</td></tr>
+
+<tr>
+<td><li>Click Next:<br><br>
+</td></tr>
+
+<tr>
+<td align='center'><img src='http://www.carexplorer.org/CE_Images/Email/Wizard_PicsImported.png'><br><br>
+</td></tr>
+
+<tr>
+<td><li>Double-click a car you want to add quick specications (you can skip it, and edit CAR file at any time):<br><br>
+</td></tr>
+
+<tr>
+<td align='center'><img align='center' src='http://www.carexplorer.org/CE_Images/Email/Wizard_PictureDetails.png'><br><br></td></tr>
+
+<tr>
+<td><li>Fill out the form for the car either manually:<br><br>
+</td></tr>
+
+<tr align='center'>
+<td><img align='center' src='http://www.carexplorer.org/CE_Images/Email/Wizard_PictureDetails_Filled.png'><br><br></td></tr>
+
+<tr>
+<td><li>Or, using XML file (populate from XML button) in the format (must be ANSI):<br><br>
+</td></tr>
+
+<tr><td align='center'><br><h2><a name="editcarfile">How to Edit CAR File</a></h2>
+<p align='left'>With edit options you can (1) add car descriptions, (2) edit car description, (3) remove car descriptions.</p>
+</td></tr>
+
+<tr>
+<td><br>
+<p><div class='clsNoteTextarea' align='left'>
+Notice that MSS file format is exactly the same as CAR file format if used for car descriptions.
+You need to manually rename CAR file exptension to MSS extension before using MSB Wizard.
+</div></p>
+
+<li>Run MSB Wizard, click Next in the Welcome page, then point to the location of the CAR file
+you want to edit with Browse or simply drag-and-drop the file:<br><br>
+</td></tr>
+
+<tr>
+<td align='center'><img src='http://www.carexplorer.org/CE_Images/Email/Wizard_SelectEdit.png'><br><br>
+</td></tr>
+
+<td><li>Make sure that "Edit" option is selected, and use "Edit image set data" in the 
+edit options area, then click Next:<br><br>
+</td></tr>
+
+<tr>
+<td align='center'><img src='http://www.carexplorer.org/CE_Images/Email/Wizard_ContentsEdit.png'><br><br>
+</td></tr>
+
+<tr>
+<td align='left'>
+<p>Now you can add, modify, or remove car descriptions:</p>
+<ul>
+<li><a name="add">Adding car description</a>. Start with JPG or GIF car picture and drag-and-drop it on the list. 
+Double click on the added item to run the dialog where you can add text specifications. Generally JPG or GIF 
+should be less than 50-100KB to keep resulting CAR file about 1MB or less.
+<li><a name="edit">Editing car description</a>. Double click an item you want to edit. Edit textual descriptions or
+replace picture.
+<li><a name="remove">Removing car description</a>. Select an item and click Delete.
+</ul>
+</td></tr>
+</table>
+
+<table align='center' width='850' border='0' cellspacing='0' cellpadding='0'> 
+<td><img height=20 src='Images/Separator_250.jpg' width=250></td> 
+<td><img height=20 src='Images/Separator_300.jpg' width=340></td> 
+<td><img height=20 src='Images/Separator_300.jpg' width=260></td></tr> 
+<tr height='70' bgcolor='#339900'>
+<td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="http://www.carexplorer.org/MSB.htm" class="clsFooterText">Download MSB Wizard</a></td>
+<td colspan='1' align='center'>
+<a href="Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">[Contact Us]</a>
+<div align='center' class="highslide-caption">Thank you for contacting MSB LLC!</div>
+<p class='clsFooterText'>MSB LLC &copy; 2005-2012</p></td>
+<td align='center' width='250' style='color:red; font-family: verdana, tahoma; 
+font-size: 10pt; font-weight: bold'><a href="Images/Contacts.png" class="clsFooterText" onclick="return hs.expand(this)">Submit CAR File</a></td></tr>
+</table> 
+</body>
+</html>
