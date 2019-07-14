@@ -1,0 +1,44 @@
+<Car_Explorer>
+
+<Title>CE Updates</Title>
+<ProductVersion>1.0</ProductVersion>
+<UpdatesVersion>1.0</UpdatesVersion>
+
+<Tag1>
+    <Text1>New:</Text1>
+    <TextColor1>#00FF00</TextColor1>
+    <TextArea1>20,20,100,35</TextArea1>
+</Tag1>
+
+<Tag2>
+    <Text2>Audi 2013 (33 models)</Text2>
+    <TextColor2>#FF0000</TextColor2>
+    <TextArea2>115,20,200,35</TextArea2>
+</Tag2>
+
+<Tag3>
+    <Text3>CE Update:</Text3>
+    <TextColor3>#00FF00</TextColor3>
+    <TextArea3>20,40,100,55</TextArea3>
+</Tag3>
+
+<Tag4>
+    <Text4>CE 1.03, released 12/22/12</Text4>
+    <TextColor4>#FF0000</TextColor4>
+    <TextArea4>115,40,260,55</TextArea4>
+</Tag4>
+
+<Tag5>
+    <Text5>Car Server:</Text5>
+    <TextColor5>#00FF00</TextColor5>
+    <TextArea5>20,60,100,75</TextArea5>
+</Tag5>
+
+
+<Tag6>
+    <Text6>841 cars, 54 automakers</Text6>
+    <TextColor6>#FF0000</TextColor6>
+    <TextArea6>115,60,260,75</TextArea6>
+</Tag6>
+
+</Car_Explorer>
